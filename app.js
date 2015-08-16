@@ -13,4 +13,10 @@ app.use('/api/elastic', function(req, res) {
     req.pipe(request(url)).pipe(res);
 });
 
+app.use('/api/kdb', function(req, res) {
+    var url = 'http://localhost:5555/ipc' + req.url.substr(1);
+    console.log(url);
+    req.pipe(request(url)).pipe(res);
+});
+
 app.listen(process.env.PORT || 3000);
