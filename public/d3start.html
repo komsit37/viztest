@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>D3start</title>
+</head>
+
+<body>
+<h1>D3 Start</h1>
+<div id="chart"></div>
+
+</body>
+<script src="lib/d3.js" charset="utf-8"></script>
+<script>
+    //d3.select('#chart').text('x');
+    d3.json('api/elastic/bnbtest-2015.08.15/calendar/_search').get(function(error, data){
+        console.log(data);
+    })
+
+</script>
+</html>
